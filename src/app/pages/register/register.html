@@ -1,10 +1,36 @@
 <section>
   <h1>Crie sua conta DevFilmes</h1>
   <p>Junte-se a milhões de apaixonados por cinema. Teste 7 dias grátis sem compromisso.</p>
-  <form>
-    <app-input label="Nome Completo" placeHolder="Ex: Lucas" />
-    <app-input type="email" label="E-mail" placeHolder="seu@email.com" />
-    <app-input type="password" label="Senha" placeHolder="Minimo 8 caracteres" />
-    <app-input type="password" label="Comfirmar senha" placeHolder="Repita a senha" />
+  <form [formGroup]="form">
+    <app-input [control]="form.controls.name" label="Nome Completo" placeHolder="Ex: Lucas" />
+    <app-input
+      [control]="form.controls.email"
+      type="email"
+      label="E-mail"
+      placeHolder="seu@email.com"
+    />
+    <app-input
+      [control]="form.controls.password"
+      type="password"
+      label="Senha"
+      placeHolder="Minimo 8 caracteres"
+    />
+    <app-input
+      [control]="form.controls.confirmPassword"
+      type="password"
+      label="Confirmar senha"
+      placeHolder="Repita a senha"
+    />
+
+    <label>
+      <input type="checkbox" formControlName="check" />
+      <span
+        >Li e concordo com os <strong>Termos de Uso</strong> e a
+        <strong>Política de Privacidade</strong> do CineStream.</span
+      >
+    </label>
+    <app-button [IsButtonEnable]="!!form.controls.check.value" textButton="Criar Minha Conta" />
   </form>
+
+  <span class="login">Já possui uma conta? <a>Faça login aqui</a></span>
 </section>

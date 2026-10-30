@@ -3,16 +3,50 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 40px;
+  display: block;
 }
 
 section {
   background-color: var(--secondary-color-background);
 
   padding: 36px;
+
+  > p {
+    margin-top: 6px;
+  }
 }
 
 form {
   display: flex;
   flex-direction: column;
   margin-top: 8px;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+label {
+  margin-top: 16px;
+  > span {
+    padding-left: 12px;
+    color: var(--secondary-color-text);
+
+    > strong {
+      color: var(--secondary-color);
+    }
+  }
+}
+
+.login {
+  width: 100%;
+  display: block;
+  text-align: center;
+  color: var(--secondary-color-text);
+
+  margin-top: 32px;
+
+  > a {
+    color: var(--secondary-color);
+    font-size: 18px;
+  }
 }
