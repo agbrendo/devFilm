@@ -3,9 +3,10 @@ import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { Input } from '../../components/input/input/input';
 import { Button } from '../../components/button/button/button';
 import { Validators } from '../../validators';
+import { RouterLink } from '@angular/router';
 
 @Component({
-  imports: [ReactiveFormsModule, Input, Button],
+  imports: [ReactiveFormsModule, Input, Button, RouterLink],
   selector: 'app-register',
   styleUrl: './register.scss',
   templateUrl: './register.html',

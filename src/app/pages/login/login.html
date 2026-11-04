@@ -1,0 +1,24 @@
+<section>
+  <div class="login-container">
+    <h1>Bem-vindo de volta</h1>
+    <p class="primary-text">Acesse sua conta para continuar assistindo suas histórias favoritas.</p>
+    <form [formGroup]="form">
+      <app-input
+        [inputControl]="form.controls.nameEmail"
+        inputType="name || email"
+        inputLabel="E-mail ou nome de usuário"
+        inputPlaceHolder="seu.email@exemplo.com"
+      />
+      <app-input
+        [inputControl]="form.controls.password"
+        inputType="password"
+        inputLabel="Senha"
+        inputPlaceHolder="********"
+      />
+
+      <app-button [isButtonEnable]="form.valid" textButton="Entrar na Conta" />
+    </form>
+    <span>Novo por aqui? <a routerLink="/cadastro">Criar conta gratuita</a></span>
+    <p>Conexão criptografada de ponta a ponta (TLS 1.3)</p>
+  </div>
+</section>

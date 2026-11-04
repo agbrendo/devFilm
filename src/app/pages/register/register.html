@@ -1,45 +1,47 @@
 <section>
-  <h1>Crie sua conta DevFilmes</h1>
-  <p>Junte-se a milhões de apaixonados por cinema. Teste 7 dias grátis sem compromisso.</p>
-  <form [formGroup]="form">
-    <app-input
-      [inputControl]="form.controls.name"
-      inputLabel="Nome Completo"
-      inputPlaceHolder="Ex Lucas"
-    />
+  <div class="register-container">
+    <h1>Crie sua conta DevFilmes</h1>
+    <p>Junte-se a milhões de apaixonados por cinema. Teste 7 dias grátis sem compromisso.</p>
+    <form [formGroup]="form">
+      <app-input
+        [inputControl]="form.controls.name"
+        inputLabel="Nome Completo"
+        inputPlaceHolder="Ex Lucas"
+      />
 
-    <app-input
-      [inputControl]="form.controls.email"
-      inputType="email"
-      inputLabel="E-mail"
-      inputPlaceHolder="seu@email.com"
-    />
+      <app-input
+        [inputControl]="form.controls.email"
+        inputType="email"
+        inputLabel="E-mail"
+        inputPlaceHolder="seu@email.com"
+      />
 
-    <app-input
-      [inputControl]="form.controls.password"
-      inputType="password"
-      inputLabel="Senha"
-      inputPlaceHolder="Mínimo 8 caracteres"
-    />
+      <app-input
+        [inputControl]="form.controls.password"
+        inputType="password"
+        inputLabel="Senha"
+        inputPlaceHolder="Mínimo 8 caracteres"
+      />
 
-    <app-input
-      [inputControl]="form.controls.confirmPassword"
-      inputType="password"
-      inputLabel="Confirmar senha"
-      inputPlaceHolder="Repita a senha"
-    />
+      <app-input
+        [inputControl]="form.controls.confirmPassword"
+        inputType="password"
+        inputLabel="Confirmar senha"
+        inputPlaceHolder="Repita a senha"
+      />
 
-    <label>
-      <input type="checkbox" formControlName="check" />/
-      <span
-        >Li e concordo com os <strong>Termos de Uso</strong> e a
-        <strong>Política de Privacidade</strong> do CineStream.</span
-      >
-    </label>
-    <app-button
-      [isButtonEnable]="!!form.controls.check.value && form.valid"
-      textButton="Criar Minha Conta"
-    />
-  </form>
-  <span class="login">Já possui uma conta? <a>Faça login aqui</a></span>
+      <label>
+        <input type="checkbox" formControlName="check" />/
+        <span
+          >Li e concordo com os <strong>Termos de Uso</strong> e a
+          <strong>Política de Privacidade</strong> do CineStream.</span
+        >
+      </label>
+      <app-button
+        [isButtonEnable]="!!form.controls.check.value && form.valid"
+        textButton="Criar Minha Conta"
+      />
+    </form>
+    <span class="login">Já possui uma conta? <a routerLink="/login">Faça login aqui</a></span>
+  </div>
 </section>

@@ -1,0 +1,57 @@
+:host {
+  width: 100%;
+  display: block;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+
+  .login-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    justify-items: center;
+
+    width: 448px;
+    height: 539px;
+
+    background-color: var(--secondary-color-background);
+    padding: 24px;
+    border-radius: 20px;
+
+    > h1 {
+      text-align: center;
+      padding-block: 20px;
+    }
+
+    .primary-text {
+      text-align: center;
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    > form {
+      margin-top: 24px;
+    }
+
+    > span {
+      text-align: center;
+      margin: 24px;
+      color: var(--secondary-color-text);
+
+      > a {
+        color: var(--primary-color);
+        font-size: 18px;
+        font-weight: bold;
+      }
+    }
+
+    p {
+      font-size: 11px;
+      text-align: center;
+    }
+  }
+}
