@@ -1,4 +1,5 @@
 <label>
   <span>{{ inputLabel() }}</span>
-  <input [type]="inputType()" [placeholder]="inputPlaceHolder()" />
+  <input [formControl]="inputControl()" [type]="inputType()" [placeholder]="inputPlaceHolder()" />
+  <span class="error">{{ error() }}</span>
 </label>

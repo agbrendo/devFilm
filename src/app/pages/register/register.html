@@ -36,7 +36,10 @@
         <strong>Política de Privacidade</strong> do CineStream.</span
       >
     </label>
-    <app-button [isButtonEnable]="!!form.controls.check.value" textButton="Criar Minha Conta" />
+    <app-button
+      [isButtonEnable]="!!form.controls.check.value && form.valid"
+      textButton="Criar Minha Conta"
+    />
   </form>
   <span class="login">Já possui uma conta? <a>Faça login aqui</a></span>
 </section>

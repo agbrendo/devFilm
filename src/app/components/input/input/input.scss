@@ -13,4 +13,10 @@ input {
   border-radius: 8px;
   background-color: var(--color-contrast);
   padding: 14px;
+  color: var(--color-text);
+}
+
+.error {
+  color: red;
+  font-size: 14px;
 }
