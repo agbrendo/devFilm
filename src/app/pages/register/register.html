@@ -38,7 +38,9 @@
         >
       </label>
       <app-button
-        [isButtonEnable]="!!form.controls.check.value && form.valid"
+        (onClick)="creatUser()"
+        [isLoading]="isLoading()"
+        [isButtonEnable]="!!form.controls.check.value && form.valid && !isLoading()"
         textButton="Criar Minha Conta"
       />
     </form>

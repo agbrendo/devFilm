@@ -1,4 +1,4 @@
-import { Component, input } from '@angular/core';
+import { Component, input, output } from '@angular/core';
 
 @Component({
   imports: [],
@@ -7,6 +7,9 @@ import { Component, input } from '@angular/core';
   templateUrl: './button.html',
 })
 export class Button {
+  public readonly isLoading = input<boolean>();
+  public readonly onClick = output<void>();
+
   public readonly textButton = input.required<string>();
   public readonly isButtonEnable = input.required<boolean>();
 }

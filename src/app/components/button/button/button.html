@@ -1,3 +1,3 @@
-<button [disabled]="!isButtonEnable()">
-  {{ textButton() }}
+<button (click)="onClick.emit()" [disabled]="!isButtonEnable()">
+  {{ isLoading() ? 'Carregando...' : textButton() }}
 </button>

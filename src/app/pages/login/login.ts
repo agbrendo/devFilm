@@ -27,7 +27,6 @@ export class Login {
     password: new FormControl<string>('', {
       validators: [
         Validators.variavelCustomRequired('O password precisa ser preenchido'),
-        Validators.variavelCustomMinLength(5, 'Deve ter no mínimo 5 caracteres'),
       ],
     }),
   });
