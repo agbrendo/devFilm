@@ -11,7 +11,11 @@ export class CacheService {
     }
 
     public getUser() {
-        return JSON.parse(sessionStorage.getItem(this.keyUser) ?? '');
+        const user = sessionStorage.getItem(this.keyUser);
+
+        if (!user) return;
+
+        return JSON.parse(user);
     }
 
     public removeUser() {

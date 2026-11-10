@@ -33,11 +33,21 @@ section {
       font-weight: bold;
     }
 
+    .error {
+      width: 100%;
+      text-align: center;
+      padding-block: 8px;
+      margin-top: 8px;
+      border-radius: 12px;
+      background-color: red;
+      color: var(--color-text);
+    }
+
     > form {
       margin-top: 24px;
     }
 
-    > span {
+    .redirect {
       text-align: center;
       margin: 24px;
       color: var(--secondary-color-text);

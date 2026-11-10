@@ -2,9 +2,13 @@
   <div class="login-container">
     <h1>Bem-vindo de volta</h1>
     <p class="primary-text">Acesse sua conta para continuar assistindo suas histórias favoritas.</p>
+
+    @if (hasError()) {
+      <span class="error">Dados incorretos, tente novamente!</span>
+    }
     <form [formGroup]="form">
       <app-input
-        [inputControl]="form.controls.nameEmail"
+        [inputControl]="form.controls.email"
         inputType="email"
         inputLabel="E-mail"
         inputPlaceHolder="seu.email@exemplo.com"
@@ -16,9 +20,14 @@
         inputPlaceHolder="********"
       />
 
-      <app-button [isButtonEnable]="form.valid" textButton="Entrar na Conta" />
+      <app-button
+        [isLoading]="isLoading()"
+        (onClick)="login()"
+        [isButtonEnable]="form.valid && !isLoading()"
+        textButton="Entrar na Conta"
+      />
     </form>
-    <span>Novo por aqui? <a routerLink="/cadastro">Criar conta gratuita</a></span>
+    <span class="redirect">Novo por aqui? <a routerLink="/cadastro">Criar conta gratuita</a></span>
     <p>Conexão criptografada de ponta a ponta (TLS 1.3)</p>
   </div>
 </section>
