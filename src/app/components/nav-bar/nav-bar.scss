@@ -1,0 +1,53 @@
+:host {
+  width: 100%;
+}
+header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding-block: 24px;
+}
+
+.navBar {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+
+  > a {
+    text-decoration: none;
+    align-items: center;
+    font-size: 40px;
+  }
+}
+
+.navLinks {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  list-style: none;
+
+  &__link {
+    text-decoration: none;
+    font-size: 18px;
+    color: var(--color-text);
+  }
+
+  .active {
+    color: red;
+  }
+}
+
+.buttonLogout {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: transparent;
+  border: none;
+  color: var(--color-text);
+  font-size: 18px;
+  cursor: pointer;
+}
+
+mat-icon {
+  color: var(--color-text);
+}

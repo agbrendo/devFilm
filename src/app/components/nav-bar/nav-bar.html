@@ -1,1 +1,27 @@
-<p>nav-bar works!</p>
+<header class="container">
+  <div class="navBar">
+    <a routerLink="/">
+      <h3>CINESTREAM</h3>
+    </a>
+    <nav>
+      <ul class="navLinks">
+        <li>
+          <a
+            class="navLinks__link"
+            routerLink="/"
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: true }"
+            >Filmes</a
+          >
+        </li>
+        <li>
+          <a class="navLinks__link" routerLink="/my-list" routerLinkActive="active">Minha Lista</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <button (click)="logout()" class="buttonLogout">
+    <span>Sair</span>
+    <mat-icon>logout</mat-icon>
+  </button>
+</header>
