@@ -1,0 +1,28 @@
+:host {
+  display: block;
+  margin-block: 24px;
+}
+
+.genres {
+  display: flex;
+  gap: 4px;
+  list-style: none;
+
+  &__item {
+    > button {
+      background-color: var(--background-color);
+      color: var(--secondary-color);
+      border-radius: 50px;
+      border: none;
+      padding: 8px 20px;
+
+      white-space: nowrap;
+      cursor: pointer;
+    }
+
+    > .active {
+      background-color: white;
+      color: var(--color-contrast);
+    }
+  }
+}

@@ -1,1 +1,15 @@
-<p>movies works!</p>
+<app-banner />
+
+<app-filter-movies
+  [genres]="genres()"
+  [currentGenre]="currentGenre()"
+  (changeGenre)="changeGenre($event)"
+/>
+
+<ul class="movies container">
+  @for (genre of genres(); track $index) {
+    <li>
+      <app-cards-movies [genre]="genre" [movies]="moviesGenres()[genre]" />
+    </li>
+  }
+</ul>

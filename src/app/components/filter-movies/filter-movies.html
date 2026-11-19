@@ -1,0 +1,12 @@
+<ul class="genres container">
+  <li class="genres__item">
+    <button (click)="onChangeGenre(undefined)" [class.active]="!currentGenre()">Todos</button>
+  </li>
+  @for (genre of genres(); track $index) {
+    <li class="genres__item">
+      <button (click)="onChangeGenre(genre)" [class.active]="genre === currentGenre()">
+        {{ genre }}
+      </button>
+    </li>
+  }
+</ul>

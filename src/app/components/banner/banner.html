@@ -1,0 +1,25 @@
+@if (movieRandom(); as movieRandom) {
+  <section>
+    <img [src]="movieRandom.imageUrl" [alt]="movieRandom.title" />
+
+    <div class="boxInfo container">
+      <h1>{{ movieRandom.title }}</h1>
+
+      <div class="boxInfo__informations">
+        <span>
+          {{ movieRandom.gender }}
+        </span>
+
+        <span class="ball">
+
+        </span>
+        
+        <span>{{ movieRandom.duration }} min
+
+        </span>
+
+      </div>
+      <p class="description">{{ movieRandom.description }}</p>
+    </div>
+  </section>
+}
